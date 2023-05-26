@@ -4,7 +4,7 @@ pipeline {
     stage('error') {
       steps {
         sh '''echo "Environment Variables:"
-echo env.BUILD_ID'''
+echo ${BUILD_ID}'''
       }
     }
 
