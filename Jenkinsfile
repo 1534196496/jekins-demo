@@ -4,7 +4,7 @@ pipeline {
     stage('error') {
       steps {
         sh '''echo "Environment Variables:"
-                    sh \'env\''''
+sh \'printenv\''''
       }
     }
 
