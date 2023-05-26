@@ -1,11 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh ''' env.each { key, value ->
-                        echo "${key}=${value}"
-                    }'''
+        sh '''echo "Environment Variables:"
+                    sh \'env\''''
       }
     }
 
