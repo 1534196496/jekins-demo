@@ -4,7 +4,9 @@ pipeline {
     stage('error') {
       steps {
         sh '''echo "Environment Variables:"
-sh \'printenv\''''
+ withEnv(["PATH+JENKINS=${env.PATH}"]) {
+                        sh \'echo $PATH+JENKINS\'
+                    }'''
       }
     }
 
